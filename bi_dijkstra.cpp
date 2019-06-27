@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
 #include <algorithm>
+#define INDEX 1 //set this to 1 if graph input starts with 1 as first node.
+//#define UNDIRECTED  // define this to process the input for undirected graph test case
+
 using namespace std;
 /*
  * Bi-directional Dijkstra Algorithm
@@ -30,6 +33,7 @@ private:
     priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> pq[MAX]; // Priority Q
     vector<vector<int> > G[MAX]; // Adj List
     vector<vector<int> > cost[MAX]; // Cost
+    vector<bool> visited[MAX];
 public:
     BiDijkstra(int n, int m)
     {
@@ -48,6 +52,9 @@ public:
 
         prev[FORWARD].assign(n, -1);
         prev[REVERSE].assign(n, -1);
+
+        visited[FORWARD].assign(n, 0);
+        visited[REVERSE].assign(n, 0);
     }
     void Reset()
     {
@@ -61,13 +68,22 @@ public:
 
         dist[FORWARD].assign(n, INFINITY);
         dist[REVERSE].assign(n, INFINITY);
+
+        visited[FORWARD].assign(n, 0);
+        visited[REVERSE].assign(n, 0);
     }
     void AddNode(int s, int t, int w)
     {
-        G[FORWARD][s - 1].push_back(t - 1);
-        G[REVERSE][t - 1].push_back(s - 1);
-        cost[FORWARD][s - 1].push_back(w);
-        cost[REVERSE][t - 1].push_back(w);
+        G[FORWARD][s- INDEX].push_back(t- INDEX);
+        G[REVERSE][t- INDEX].push_back(s- INDEX);
+        cost[FORWARD][s- INDEX].push_back(w);
+        cost[REVERSE][t- INDEX].push_back(w);
+#ifdef UNDIRECTED
+        G[FORWARD][t- INDEX].push_back(s- INDEX);
+        G[REVERSE][s- INDEX].push_back(t- INDEX);
+        cost[FORWARD][t- INDEX].push_back(w);
+        cost[REVERSE][s- INDEX].push_back(w);
+#endif
     }
     void Process(int node, direction d)
     {
@@ -108,6 +124,7 @@ public:
         dist[REVERSE][t] = 0;
         pq[FORWARD].push(make_pair(s, 0));
         pq[REVERSE].push(make_pair(t, 0));
+
         while (pq[FORWARD].size() && pq[REVERSE].size())
         {
             for (int i = FORWARD; i < MAX; i++)
@@ -116,7 +133,10 @@ public:
                 //ExtractMin
                 int n = pq[i].top().first;
                 pq[i].pop();
+                if (visited[d][n])
+                    continue;
                 Process(n, d);
+                visited[d][n] = true;
                 bool other = (d == FORWARD) ? 1 : 0;
                 if (proc[other].find(n) != proc[other].end()) // Found in other-set
                     return ShortestPath();
@@ -142,7 +162,9 @@ int main()
     {
         int s, t;
         cin >> s >> t;
-        cout << b.FindPath(s - 1, t - 1) << "\n";
+        s = s - INDEX;
+        t = t - INDEX;
+        cout << b.FindPath(s, t) << "\n";
         b.Reset();
     }
 }
