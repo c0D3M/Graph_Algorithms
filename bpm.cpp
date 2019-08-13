@@ -70,7 +70,7 @@ FlowGraph read_data() {
 
 int max_flow(FlowGraph& graph, int s, int t, vector<int> &matching) {
     int flow = 0;
-    /* your code goes here */
+    
 	//Edmond Karp Algorithm
 	while(1)
 	{
@@ -180,7 +180,7 @@ class MaxMatching {
   }
 
   vector<int> FindMatching(const vector<vector<bool>>& adj_matrix) {
-#if 1
+
 	vector<int> matching(adj_matrix.size(), -1);
 	// Convert  to G` i.e. add s & table
 	int n = 2 + adj_matrix.size()+ adj_matrix[0].size();
@@ -198,20 +198,7 @@ class MaxMatching {
 	for (int j=0; j < adj_matrix[0].size(); j++)
 		g.add_edge(1+adj_matrix.size()+j, n-1, 1);
 	max_flow(g, 0, g.size() - 1, matching);
-#else
-    // Replace this code with an algorithm that finds the maximum
-    // matching correctly in all cases.
-    int num_left = adj_matrix.size();
-    int num_right = adj_matrix[0].size();
-    vector<int> matching(num_left, -1);
-    vector<bool> busy_right(num_right, false);
-    for (int i = 0; i < num_left; ++i)
-      for (int j = 0; j < num_right; ++j)
-        if (matching[i] == -1 && !busy_right[j] && adj_matrix[i][j]) {
-          matching[i] = j;
-          busy_right[j] = true;
-        }
-#endif
+
 		
     return matching;
   }
