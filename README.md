@@ -7,3 +7,4 @@ Completed course with 83.33 %.
 TODO:  
 - TLE on Negative cycle shortest path problem.  
 - Optional Advance section (A* , Contraction Hirerachy, TSP).  
+- Transtive Closure.  
