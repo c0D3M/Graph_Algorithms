@@ -13,7 +13,7 @@ TODO:
 Algroithm | #Description | #Time Complexity | #Space Complexity | #Misc  
 --- | --- | --- | --- |---  
 Dijkstra | Single Source Shortest Path for weighted graph  | 283 | 290 | cant work on grah with -ve edges.  
-Bellman Ford | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | 290 | Handle -ve edges and can also find -ve cycle.  
+Bellman Ford | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Handle -ve edges and can also find -ve cycle.  
 Johnson Algorithm | All Pair Shortest Path | 283 | 290 | Works betters in sparse graph as it uses Bellman-Ford and Dijsktra.  
 Fllyod-Warshall | All Pair Shortest Path | O( _V_ ^3 ) | 290 | typically used in dense graph.  
 Kahn Algorithm | Topological Sort | O( _V_ + _E_ ) | 290 |  
