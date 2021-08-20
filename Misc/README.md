@@ -23,5 +23,5 @@ All test cases passes.
 Running on Fumes 
 Chapter 1 nodes are on x-axis, so we can simply use sliding window of m past station.  
 Chapter 2 is like graph, we can do graph modelling.  
-Answer seems correct but Case 17 is getting seg fault.  
-Anyway idea seems same as above problems.  
+Answer is correct till Case 16 ,Case 17 is getting seg fault due to large input.  
+But the idea is same as above problems.  
