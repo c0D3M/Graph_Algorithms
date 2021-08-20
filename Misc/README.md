@@ -18,3 +18,10 @@ Another graph modelling problem , same as above , here it can have 'c' state i.e
 So at each node we have option to visit  neighbour and relax their cost if possible(current fuel capacity is good enough).  
 Another option is to fuel up by 1 unit.  
 All test cases passes.  
+
+**Fb Hacker Cub 2020 Qualification Round** 
+Running on Fumes 
+Chapter 1 nodes are on x-axis, so we can simply use sliding window of m past station.  
+Chapter 2 is like graph, we can do graph modelling.  
+Answer seems correct but Case 17 is getting seg fault.  
+Anyway idea seems same as above problems.  
