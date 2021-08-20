@@ -25,3 +25,9 @@ Chapter 1 nodes are on x-axis, so we can simply use sliding window of m past sta
 Chapter 2 is like graph, we can do graph modelling.  
 Answer is correct till Case 16 ,Case 17 is getting seg fault due to large input.  
 But the idea is same as above problems.  
+
+**UVA 10269**
+https://vjudge.net/problem/UVA-10269  
+Key idea is Mario can zip thru some path of length <=L , now to find these paths one has to run Fllyod Warshall Algorithm to find all pair shortes path.  
+So first do this and then run Dijkstra and model the graph , here the state would be (node,K) i.e. how many time accelration show has been used.  
+At each transaction first do normal dijkstra relaxtion and then see if accelration can be used and select those path (calculated from flyod warshall whose length <=L).  
