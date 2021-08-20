@@ -1,3 +1,7 @@
+**Graph Modelling**  
+Can be understood from Page 150 of https://cpbook.net/  
+Another good resource is https://codeforces.com/blog/entry/45897  
+
 **CSES 1995**  
 https://cses.fi/problemset/task/1195/  
 Key idea was to learn graph modelling with additonal state.  
