@@ -20,6 +20,8 @@ Another option is to fuel up by 1 unit.
 All test cases passes.  
 
 **Fb Hacker Cub 2020 Qualification Round** 
+https://www.facebook.com/codingcompetitions/hacker-cup/2020/qualification-round/problems/D1  
+
 Running on Fumes 
 Chapter 1 nodes are on x-axis, so we can simply use sliding window of m past station.  
 Chapter 2 is like graph, we can do graph modelling.  
