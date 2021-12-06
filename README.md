@@ -27,3 +27,14 @@ Bipartite test | 301 | 283 | 290 | Color the Graph with 2 color if possible its 
 Hungarain Algorithm | Maximum Matching | 283 | 290 | Bipartite + Weighted   
 Blosson Algorithm | Maximum Matching | 283 | 290 | Weighted + Non-bipartite, like we used Christofide Algorithm for TSP.     
 Hopcroft Karp | Maximum Matching | 283 | 290 | Unweighted + Bipartite   
+
+Euler Cycle: Visit each edge exactly once and end on same node where it start. Possibly if graph has even degree.  
+To find a cycle then start from any node.  
+If there is a Euler cycle there would be Euler Path also but reverse is not true.  
+
+Euler Path: May start and end on different node.  
+For undirected graph, atmost 2 node can have odd degree.  
+For directed graph, at most 1 node has outDgree-inDgree =1(start node) and inDegree - outDegree=1 (end node).  
+Hierholzer's  is used to find an Euler Path.  
+
+Hamiltonian Cycle: It's a NP-Hard problem to find if a cycle exists or not.  
