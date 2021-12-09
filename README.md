@@ -19,15 +19,16 @@ Fllyod-Warshall | All Pair Shortest Path | O( _V_ ^3 ) | 290 | typically used in
 Kahn Algorithm | Topological Sort | O( _V_ + _E_ ) | 290 |  
 Kruskal Algorithm | Minimum Spanning Tree | O( _V_ + _E_ ) | 290 |  
 Prim Algorithm | Minimum Spanning Tree | O( _V_ + _E_ ) | 290 |  
-Edmond-Karp Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path 
-Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabl.   
-Tarjan Algorithm | For finding SCC in directed graph | 283 | 290 | https://www.youtube.com/watch?v=wUgWX0nc4NY For undirected graph we use SCC but for directed we cant use that as a directed edge is in different.    
+Hierholzer's Algroithm  | Euler Path in a graph | | | https://www.youtube.com/watch?v=8MpoO2zA2l4  Practice: https://leetcode.com/problems/valid-arrangement-of-pairs/   
+Tarjan Algorithm | For finding SCC in directed graph | 283 | 290 | https://www.youtube.com/watch?v=wUgWX0nc4NY For undirected graph we use SCC but for directed we cant use that as a directed edge is in different.  Practice: https://leetcode.com/problems/number-of-provinces/  
 Tarjan Algorithm | For finding bridges and articulation point | | | https://codeforces.com/blog/entry/71146 https://www.youtube.com/watch?v=64KK9K4RpKE Practice:  https://leetcode.com/problems/critical-connections-in-a-network/  
 Johnson All Simple cycle | For finding all cycles  | 283 | 290 | A SCC can contain multiple elementary cycle.
 Bipartite test | 301 | 283 | 290 | Color the Graph with 2 color if possible its bi-partite
 Hungarain Algorithm | Maximum Matching | 283 | 290 | Bipartite + Weighted   
 Blosson Algorithm | Maximum Matching | 283 | 290 | Weighted + Non-bipartite, like we used Christofide Algorithm for TSP.     
 Hopcroft Karp | Maximum Matching | 283 | 290 | Unweighted + Bipartite   
+Edmond-Karp Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path 
+Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabl.   
 
 Euler Cycle: Visit each edge exactly once and end on same node where it start. Possibly if graph has even degree.  
 To find a cycle then start from any node.  
