@@ -22,7 +22,7 @@ Prim Algorithm | Minimum Spanning Tree | O( _V_ + _E_ ) | 290 |
 Edmond-Karp Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path 
 Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabl.   
 Tarjan Algorithm | For finding SCC in directed graph | 283 | 290 | https://www.youtube.com/watch?v=wUgWX0nc4NY For undirected graph we use SCC but for directed we cant use that as a directed edge is in different.    
-Tarjan Algorithm | For finding bridges and articulation point | | | https://codeforces.com/blog/entry/71146 https://www.youtube.com/watch?v=64KK9K4RpKE  
+Tarjan Algorithm | For finding bridges and articulation point | | | https://codeforces.com/blog/entry/71146 https://www.youtube.com/watch?v=64KK9K4RpKE Practice:  https://leetcode.com/problems/critical-connections-in-a-network/  
 Johnson All Simple cycle | For finding all cycles  | 283 | 290 | A SCC can contain multiple elementary cycle.
 Bipartite test | 301 | 283 | 290 | Color the Graph with 2 color if possible its bi-partite
 Hungarain Algorithm | Maximum Matching | 283 | 290 | Bipartite + Weighted   
