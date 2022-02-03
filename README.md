@@ -24,9 +24,9 @@ Tarjan Algorithm | For finding SCC in directed graph | 283 | 290 | https://www.y
 Tarjan Algorithm | For finding bridges and articulation point | | | https://codeforces.com/blog/entry/71146 https://www.youtube.com/watch?v=64KK9K4RpKE Practice:  https://leetcode.com/problems/critical-connections-in-a-network/  
 Johnson All Simple cycle | For finding all cycles  | 283 | 290 | A SCC can contain multiple elementary cycle.
 Bipartite test | 301 | 283 | 290 | Color the Graph with 2 color if possible its bi-partite
-Hungarain Algorithm | Maximum Matching | 283 | 290 | Bipartite + Weighted   
-Blosson Algorithm | Maximum Matching | 283 | 290 | Weighted + Non-bipartite, like we used Christofide Algorithm for TSP.     
-Hopcroft Karp | Maximum Matching | 283 | 290 | Unweighted + Bipartite   
+Hungarain Algorithm | Maximum Matching |  |  | Bipartite + Weighted  https://brilliant.org/wiki/hungarian-matching/   
+Blosson Algorithm | Maximum Matching |  |  | Weighted + Non-bipartite, like we used Christofide Algorithm for TSP.     https://brilliant.org/wiki/blossom-algorithm/  
+Hopcroft Karp | Maximum Matching |  |  | Unweighted + Bipartite  https://brilliant.org/wiki/hopcroft-karp/   
 Edmond-Karp Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path 
 Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabl.   
 
