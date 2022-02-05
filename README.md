@@ -14,6 +14,7 @@ Algroithm | #Description | #Time Complexity | #Space Complexity | #Misc
 --- | --- | --- | --- |---  
 Dijkstra | Single Source Shortest Path for weighted graph  | O(_(V +  E) log V_) and for dense graph O(_E log V_)| O( _V_  ) | cant work on grah with -ve edges.  
 Bellman Ford | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Handle -ve edges and can also find -ve cycle.  
+Shortes Path faster Algorithm(SPFA) | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Unline Bellmand Ford , this uses a queue to ush only those nodes which are relax and if they are not already in queue.  
 Johnson Algorithm | All Pair Shortest Path | 283 | 290 | Works betters in sparse graph as it uses Bellman-Ford and Dijsktra.  
 Fllyod-Warshall | All Pair Shortest Path | O( _V_ ^3 ) | 290 | typically used in dense graph.  
 Kahn Algorithm | Topological Sort | O( _V_ + _E_ ) | 290 |  
@@ -25,10 +26,10 @@ Tarjan Algorithm | For finding bridges and articulation point | | | https://code
 Johnson All Simple cycle | For finding all cycles  | 283 | 290 | A SCC can contain multiple elementary cycle.
 Bipartite test | 301 | 283 | 290 | Color the Graph with 2 color if possible its bi-partite
 Hungarain Algorithm | Maximum Matching |  |  | Bipartite + Weighted  https://brilliant.org/wiki/hungarian-matching/   
-Blosson Algorithm | Maximum Matching |  |  | Weighted + Non-bipartite, like we used Christofide Algorithm for TSP.     https://brilliant.org/wiki/blossom-algorithm/  
+Blosson Algorithm | Maximum Matching |  |  | Unweighted + Non-bipartite, like we used Christofide Algorithm for TSP.     https://brilliant.org/wiki/blossom-algorithm/  
 Hopcroft Karp | Maximum Matching |  |  | Unweighted + Bipartite  https://brilliant.org/wiki/hopcroft-karp/   
 Edmond-Karp Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path 
-Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabl.   
+Dinic Algorithm | Max-Flow | O( _V_ + _E_ ) | 290 | Augmented Path, Another class of algorithm for max flow uses push-relabel.   
 
 Euler Cycle: Visit each edge exactly once and end on same node where it start. Possibly if graph has even degree.  
 To find a cycle then start from any node.  
