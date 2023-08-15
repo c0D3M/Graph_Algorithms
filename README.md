@@ -9,12 +9,15 @@ TODO:
 - Optional Advance section (A* , Contraction Hirerachy, TSP).  
 - Transtive Closure.  
 
+BFS vs SPFA: Both are exactly same and uses queue to push relaxed nodes, but in BFS we never visit a node again while in SPFA we can visit.  
+BFS is technically suitable for uniform cost edges(unweight graph), like edges of cost 1, BSF finds minimum edges to reach a node.  
+It only consider minimum number of edges, NOT COST!  
 
 Algroithm | #Description | #Time Complexity | #Space Complexity | #Misc  
 --- | --- | --- | --- |---  
 Dijkstra | Single Source Shortest Path for weighted graph  | O(_(V +  E) log V_) and for dense graph O(_E log V_)| O( _V_  ) | cant work on grah with -ve edges.  
-Bellman Ford | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Handle -ve edges and can also find -ve cycle.  
-Shortes Path faster Algorithm(SPFA) | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Unline Bellmand Ford , this uses a queue to ush only those nodes which are relax and if they are not already in queue.  
+Bellman Ford | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | https://leetcode.com/problems/cheapest-flights-within-k-stops/description/  Handle -ve edges and can also find -ve cycle.  
+Shortes Path faster Algorithm(SPFA) | Single Source Shortest path with -ve edges | O( _V_ **.** _E_ ) | O( _V_  ) | Unlike Bellmand Ford , this uses a queue to ush only those nodes which are relax and if they are not already in queue.  Above problem can be solved using SPFA also.  
 Johnson Algorithm | All Pair Shortest Path | 283 | 290 | Works betters in sparse graph as it uses Bellman-Ford and Dijsktra.  
 Fllyod-Warshall | All Pair Shortest Path | O( _V_ ^3 ) | 290 | typically used in dense graph.  
 Kahn Algorithm | Topological Sort | O( _V_ + _E_ ) | 290 |  
