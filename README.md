@@ -13,6 +13,9 @@ BFS vs SPFA: Both are exactly same and uses queue to push relaxed nodes, but in 
 BFS is technically suitable for uniform cost edges(unweight graph), like edges of cost 1, BSF finds minimum edges to reach a node.  
 It only consider minimum number of edges, NOT COST!  
 
+To practice BFS/DFS/Dijkstra/Bellmand Ford/Flyod Warshall/SPFA in a single problem  
+https://leetcode.com/problems/network-delay-time/  
+
 Algroithm | #Description | #Time Complexity | #Space Complexity | #Misc  
 --- | --- | --- | --- |---  
 Dijkstra | Single Source Shortest Path for weighted graph  | O(_(V +  E) log V_) and for dense graph O(_E log V_)| O( _V_  ) | cant work on grah with -ve edges.  
