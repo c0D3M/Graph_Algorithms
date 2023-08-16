@@ -45,6 +45,7 @@ Euler Path: May start and end on different node.
 For undirected graph, atmost 2 node can have odd degree.  
 For directed graph, at most 1 node has outDgree-inDgree =1(start node) and inDegree - outDegree=1 (end node).  
 Hierholzer's Algorithm is used to find an Euler Path.  https://leetcode.com/problems/valid-arrangement-of-pairs/  
+https://leetcode.com/problems/reconstruct-itinerary/description/  
 
 
 Hamiltonian Cycle: It's a NP-Hard problem to find if a cycle exists or not.  
