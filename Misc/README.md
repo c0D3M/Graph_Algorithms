@@ -34,3 +34,14 @@ Key idea is Mario can zip thru some path of length <=L , now to find these paths
 So first do this and then run **Dijkstra** and model the graph , here the state would be (node,K) i.e. how many time accelration show has been used.  
 At each piority queue pop transaction first do normal dijkstra relaxtion and then see if accelaration can be used and select those path (calculated from flyod warshall whose length <=L).  
 All test cases passes.  
+
+**1928. Minimum Cost to Reach Destination in Time**  
+https://leetcode.com/problems/minimum-cost-to-reach-destination-in-time/  
+Here too we are given cost & time, we have reach in least cost to destination.  
+Additionally if time surpass a threshold (given as input)  we cannot explore any further.  
+Now 2 things can happen, either we found a cheaper cost to next node, in that case take both new_cost & new_time and push in PQ.  
+If not see if we get a shorter time path ? if yes push with updated time but same cost as new_cost, this is because we found a cheaper time to next node, however cost we have to take whatever it brings us here.  
+All this logic to be done if we are within threshold time.  
+Early pruning can be done,
+If we encounter a node whose cost as well time is already lesser than current node can relax, return
+If we encounter dest node, stop, as surely this is cheapest cost , since our PQ is prioritizing lower cost node first.
