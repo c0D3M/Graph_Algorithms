@@ -25,24 +25,28 @@ int main(int argc, char*argv[])
 	{
 		int u = pq.top().second.first;
 		bool coupon_available = pq.top().second.second;
+		long long cost = -pq.top().first;
 		pq.pop();
-		
+		if(dist[u][coupon_available] < cost)
+			continue;
+		if(u==n)
+			break ;
 		for(size_t i = 0; i < adj[u].size(); ++i)
 		{
 			int v = adj[u][i].first;
 			int w = adj[u][i].second;
 			// Without coupon travel
-			if(dist[v][coupon_available] > dist[u][coupon_available] + w)
+			if(dist[v][coupon_available] > cost + w)
 			{
-				dist[v][coupon_available] = dist[u][coupon_available] + w;
-				pq.push(make_pair(-(dist[u][coupon_available] + w), make_pair( v, coupon_available)));
+				dist[v][coupon_available] = cost + w;
+				pq.push(make_pair(-(dist[v][coupon_available]), make_pair( v, coupon_available)));
 			}
 			
 			// With coupon travel
-			if(coupon_available and (dist[v][0] > dist[u][1] + w/2))
+			if(coupon_available and (dist[v][0] > cost + w/2))
 			{
-				dist[v][0] = dist[u][1] + w/2;
-				pq.push(make_pair(-(dist[u][1] + w/2), make_pair( v, false)));
+				dist[v][0] = cost + w/2;
+				pq.push(make_pair(-(dist[v][0]), make_pair( v, false)));
 			}
 		}
 	}
