@@ -10,7 +10,10 @@ If discount is availed then next state can only availed.
 If discount is not availed , then both state transition is possible.  
     Goto next node without availing discount.  
     Goto next node with availing discount.  
-1 test cases still give TLE but give right answer on my machine in 2 minutes, may be bidirectinal dijkstra to be used.  
+~~1 test cases still give TLE but give right answer on my machine in 2 minutes, may be bidirectinal dijkstra to be used.~~
+Root cause was early exit in Dijkstra.
+Continue if distance of node is lesser than cost i.e. dist[u] < cost  
+Exit if we reached destination node, because destination node if processed surely that means it has been relaxed and cheapest cost as we r using PQ.  
 
 **UVA 11367**
 https://vjudge.net/problem/UVA-11367  
