@@ -48,3 +48,10 @@ All this logic to be done if we are within threshold time.
 Early pruning can be done,
 If we encounter a node whose cost as well time is already lesser than current node can relax, return
 If we encounter dest node, stop, as surely this is cheapest cost , since our PQ is prioritizing lower cost node first.
+
+**Dijkstra as helper** 
+sum time we can use it as sub routine
+consider https://leetcode.com/problems/maximum-path-quality-of-a-graph/  
+Here we have to come back to src node 0 , so if we wander too far and reach back in stipulated time(given in input decrement as we traverse in graph).  
+Then there is no need to explore the DFS and we can do early exit.  
+
